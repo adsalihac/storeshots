@@ -1,5 +1,5 @@
 {
-  "name": "@shotify/core",
+  "name": "@storeshots/core",
   "version": "0.1.0",
   "description": "Core Shotify screenshot generation pipeline.",
   "type": "module",
@@ -18,11 +18,11 @@
     "clean": "rm -rf dist"
   },
   "dependencies": {
-    "@shotify/device-presets": "workspace:*",
-    "@shotify/expo-router-discovery": "workspace:*",
-    "@shotify/image-processor": "workspace:*",
-    "@shotify/screenshot-engine": "workspace:*",
-    "@shotify/shared": "workspace:*"
+    "@storeshots/device-presets": "workspace:*",
+    "@storeshots/expo-router-discovery": "workspace:*",
+    "@storeshots/image-processor": "workspace:*",
+    "@storeshots/screenshot-engine": "workspace:*",
+    "@storeshots/shared": "workspace:*"
   },
   "devDependencies": {
     "typescript": "^5.7.2"

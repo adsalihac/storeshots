@@ -1,5 +1,5 @@
 {
-  "name": "@shotify/expo-router-discovery",
+  "name": "@storeshots/expo-router-discovery",
   "version": "0.1.0",
   "description": "Expo Router route discovery for Shotify.",
   "type": "module",
@@ -18,7 +18,7 @@
     "clean": "rm -rf dist"
   },
   "dependencies": {
-    "@shotify/shared": "workspace:*"
+    "@storeshots/shared": "workspace:*"
   },
   "devDependencies": {
     "typescript": "^5.7.2"

@@ -1,5 +1,5 @@
 {
-  "name": "@shotify/device-presets",
+  "name": "@storeshots/device-presets",
   "version": "0.1.0",
   "description": "App Store and Play Store screenshot device presets for Shotify.",
   "type": "module",
@@ -18,7 +18,7 @@
     "clean": "rm -rf dist"
   },
   "dependencies": {
-    "@shotify/shared": "workspace:*"
+    "@storeshots/shared": "workspace:*"
   },
   "devDependencies": {
     "typescript": "^5.7.2"

@@ -1,5 +1,5 @@
 {
-  "name": "@shotify/ui",
+  "name": "@storeshots/ui",
   "version": "0.1.0",
   "description": "Shared UI primitives for Shotify apps.",
   "type": "module",

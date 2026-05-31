@@ -1,5 +1,5 @@
 {
-  "name": "shotify",
+  "name": "storeshots",
   "version": "0.1.0",
   "description": "Generate App Store and Play Store screenshots from Expo Router apps.",
   "type": "module",
@@ -19,9 +19,9 @@
     "clean": "rm -rf dist"
   },
   "dependencies": {
-    "@shotify/core": "workspace:*",
-    "@shotify/device-presets": "workspace:*",
-    "@shotify/shared": "workspace:*",
+    "@storeshots/core": "workspace:*",
+    "@storeshots/device-presets": "workspace:*",
+    "@storeshots/shared": "workspace:*",
     "commander": "^12.1.0",
     "zod": "^3.24.1"
   },

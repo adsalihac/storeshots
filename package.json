@@ -1,5 +1,5 @@
 {
-  "name": "shotify",
+  "name": "storeshots",
   "version": "0.1.0",
   "private": true,
   "description": "Generate App Store and Play Store screenshots from Expo Router apps.",
@@ -10,7 +10,7 @@
   },
   "scripts": {
     "build": "turbo build",
-    "dev": "turbo dev --parallel --filter @shotify/website --filter @shotify/docs",
+    "dev": "turbo dev --parallel --filter @storeshots/website --filter @storeshots/docs",
     "dev:all": "turbo dev --parallel",
     "lint": "turbo lint",
     "typecheck": "turbo typecheck",

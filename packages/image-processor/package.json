@@ -1,5 +1,5 @@
 {
-  "name": "@shotify/image-processor",
+  "name": "@storeshots/image-processor",
   "version": "0.1.0",
   "description": "High quality screenshot processing for Shotify.",
   "type": "module",
@@ -18,7 +18,7 @@
     "clean": "rm -rf dist"
   },
   "dependencies": {
-    "@shotify/shared": "workspace:*",
+    "@storeshots/shared": "workspace:*",
     "sharp": "^0.33.5"
   },
   "devDependencies": {

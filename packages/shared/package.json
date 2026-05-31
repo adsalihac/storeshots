@@ -1,5 +1,5 @@
 {
-  "name": "@shotify/shared",
+  "name": "@storeshots/shared",
   "version": "0.1.0",
   "description": "Shared schemas, types, and utilities for Shotify.",
   "type": "module",

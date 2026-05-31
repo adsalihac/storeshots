@@ -1,0 +1,21 @@
+{
+  "name": "Storeshots",
+  "short_name": "Storeshots",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#18181B",
+  "theme_color": "#18181B",
+  "description": "Automatically discover Expo Router routes, capture screenshots, and export App Store and Play Store assets.",
+  "icons": [
+    {
+      "src": "/icons/app-icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "/icons/app-icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}

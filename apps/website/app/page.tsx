@@ -88,8 +88,8 @@ function Header() {
       <div className="mx-auto flex h-16 max-w-6xl items-center justify-between px-5">
         <Link href="/" className="flex items-center gap-3 text-sm font-semibold text-white">
           <Image
-            src="/storeshots-mark.svg"
-            alt=""
+            src="/icons/storeshots-logo.svg"
+            alt="Storeshots logo"
             width={32}
             height={32}
             className="rounded-md border border-zinc-800 bg-zinc-950"
@@ -108,7 +108,7 @@ function Header() {
           </Link>
         </nav>
         <div className="flex items-center gap-2">
-          <Link href="https://github.com/storeshots/storeshots" className={buttonVariants({ variant: "ghost", size: "sm" })}>
+          <Link href="https://github.com/adsalihac/storeshots" className={buttonVariants({ variant: "ghost", size: "sm" })}>
             <Github className="h-4 w-4" />
             <span className="hidden sm:inline">GitHub</span>
           </Link>

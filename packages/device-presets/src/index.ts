@@ -1,5 +1,5 @@
-import type { DevicePreset, Platform } from "@shotify/shared";
-import { ShotifyError } from "@shotify/shared";
+import type { DevicePreset, Platform } from "@storeshots/shared";
+import { StoreshotsError } from "@storeshots/shared";
 
 export const devicePresets: DevicePreset[] = [
   {
@@ -107,7 +107,7 @@ export function getDevicePresets(platform: Platform = "all", ids?: string[]): De
   const missing = ids.filter((id) => !selected.some((device) => device.id === id));
 
   if (missing.length > 0) {
-    throw new ShotifyError(
+    throw new StoreshotsError(
       "UNKNOWN_DEVICE",
       `Unknown device preset${missing.length > 1 ? "s" : ""}: ${missing.join(", ")}`
     );

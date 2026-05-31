@@ -1,7 +1,7 @@
 {
   "name": "@storeshots/shared",
   "version": "0.1.0",
-  "description": "Shared schemas, types, and utilities for Shotify.",
+  "description": "Shared schemas, types, and utilities for Storeshots.",
   "type": "module",
   "main": "./dist/index.js",
   "types": "./dist/index.d.ts",

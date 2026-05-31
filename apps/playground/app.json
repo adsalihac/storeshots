@@ -1,8 +1,8 @@
 {
   "expo": {
-    "name": "Shotify Playground",
-    "slug": "shotify-playground",
-    "scheme": "shotify-playground",
+    "name": "Storeshots Playground",
+    "slug": "storeshots-playground",
+    "scheme": "storeshots-playground",
     "orientation": "portrait",
     "plugins": ["expo-router"]
   }

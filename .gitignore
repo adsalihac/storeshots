@@ -12,7 +12,7 @@ coverage
 
 # generated screenshots
 screenshots
-shotify-output
+storeshots-output
 
 # local env
 .env

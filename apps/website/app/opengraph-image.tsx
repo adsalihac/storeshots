@@ -47,7 +47,7 @@ export default function Image() {
           >
             $
           </div>
-          Shotify
+          Storeshots
         </div>
         <div style={{ marginTop: 48, maxWidth: 930, fontSize: 76, lineHeight: 1, fontWeight: 700 }}>
           Generate App Store Screenshots in One Command

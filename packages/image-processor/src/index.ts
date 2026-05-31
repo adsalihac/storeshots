@@ -1,7 +1,7 @@
 import { mkdir } from "node:fs/promises";
 import path from "node:path";
 import sharp from "sharp";
-import type { DevicePreset } from "@shotify/shared";
+import type { DevicePreset } from "@storeshots/shared";
 
 export interface ProcessScreenshotInput {
   inputPath: string;

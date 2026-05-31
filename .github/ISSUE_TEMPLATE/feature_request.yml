@@ -1,5 +1,5 @@
 name: Feature request
-description: Suggest an improvement for Shotify.
+description: Suggest an improvement for Storeshots.
 title: "[Feature]: "
 labels: ["enhancement"]
 body:
@@ -7,7 +7,7 @@ body:
     id: problem
     attributes:
       label: Problem
-      description: What workflow should Shotify make easier?
+      description: What workflow should Storeshots make easier?
     validations:
       required: true
   - type: textarea

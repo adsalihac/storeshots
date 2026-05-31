@@ -1,25 +1,25 @@
 ---
 title: CLI Commands
-description: Commands available in the Shotify CLI.
+description: Commands available in the Storeshots CLI.
 ---
 
 ## Generate
 
 ```bash
-npx shotify
-npx shotify generate
+npx storeshots
+npx storeshots generate
 ```
 
 Generate screenshots for discovered Expo Router routes.
 
 ```bash
-npx shotify generate --output screenshots --platform all
+npx storeshots generate --output screenshots --platform all
 ```
 
 ## Routes
 
 ```bash
-npx shotify routes
+npx storeshots routes
 ```
 
 Print every discovered route and its source file.
@@ -27,7 +27,7 @@ Print every discovered route and its source file.
 ## Devices
 
 ```bash
-npx shotify devices
+npx storeshots devices
 ```
 
 List supported App Store and Play Store device presets.
@@ -35,7 +35,7 @@ List supported App Store and Play Store device presets.
 ## Doctor
 
 ```bash
-npx shotify doctor
+npx storeshots doctor
 ```
 
 Check project structure, Expo Router directories, simulator tooling, Android tooling, and image processing availability.
@@ -43,8 +43,8 @@ Check project structure, Expo Router directories, simulator tooling, Android too
 ## Useful options
 
 ```bash
-npx shotify generate --platform apple
-npx shotify generate --devices iphone-6-9,ipad-13
-npx shotify generate --routes /,/profile,/subscription
-npx shotify generate --dry-run
+npx storeshots generate --platform apple
+npx storeshots generate --devices iphone-6-9,ipad-13
+npx storeshots generate --routes /,/profile,/subscription
+npx storeshots generate --dry-run
 ```

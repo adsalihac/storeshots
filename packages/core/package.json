@@ -1,7 +1,7 @@
 {
   "name": "@storeshots/core",
   "version": "0.1.0",
-  "description": "Core Shotify screenshot generation pipeline.",
+  "description": "Core Storeshots screenshot generation pipeline.",
   "type": "module",
   "main": "./dist/index.js",
   "types": "./dist/index.d.ts",

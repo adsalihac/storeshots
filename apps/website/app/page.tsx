@@ -14,11 +14,11 @@ import {
   Sparkles,
   Zap
 } from "lucide-react";
-import { Badge, Card, SectionLabel, buttonVariants, cn } from "@shotify/ui";
+import { Badge, Card, SectionLabel, buttonVariants, cn } from "@storeshots/ui";
 import { Reveal } from "@/components/reveal";
 
 const terminalLines = [
-  "$ npx shotify",
+  "$ npx storeshots",
   "",
   "✓ Found 14 routes",
   "✓ Captured screenshots",
@@ -64,7 +64,7 @@ const features = [
 ];
 
 const dxItems = ["Zero configuration", "Expo Router support", "TypeScript first", "CI/CD friendly", "Open source"];
-const docsBaseUrl = process.env.NEXT_PUBLIC_DOCS_URL ?? "https://docs.shotify.dev/docs";
+const docsBaseUrl = process.env.NEXT_PUBLIC_DOCS_URL ?? "https://docs.storeshots.dev/docs";
 
 export default function Home() {
   return (
@@ -94,7 +94,7 @@ function Header() {
             height={32}
             className="rounded-md border border-zinc-800 bg-zinc-950"
           />
-          Shotify
+          Storeshots
         </Link>
         <nav className="hidden items-center gap-6 text-sm text-zinc-400 md:flex">
           <Link className="transition hover:text-white" href="#features">
@@ -163,7 +163,7 @@ function TerminalWindow() {
         <span className="h-3 w-3 rounded-full bg-red-400/80" />
         <span className="h-3 w-3 rounded-full bg-yellow-400/80" />
         <span className="h-3 w-3 rounded-full bg-green-400/80" />
-        <span className="ml-4 font-mono text-xs text-zinc-500">shotify generate</span>
+        <span className="ml-4 font-mono text-xs text-zinc-500">storeshots generate</span>
       </div>
       <pre className="overflow-x-auto p-6 font-mono text-sm leading-7 text-zinc-200 sm:p-8 sm:text-base">
         {terminalLines.map((line, index) => (
@@ -186,7 +186,7 @@ function Features() {
           <div className="mt-4 grid gap-4 lg:grid-cols-[0.86fr_1.14fr] lg:items-end">
             <h2 className="text-3xl font-semibold text-white sm:text-4xl">Everything required for store screenshots.</h2>
             <p className="max-w-2xl text-base leading-7 text-zinc-400">
-              Shotify keeps the release workflow close to the codebase: route discovery, capture orchestration, image processing, and deterministic output are packaged together.
+              Storeshots keeps the release workflow close to the codebase: route discovery, capture orchestration, image processing, and deterministic output are packaged together.
             </p>
           </div>
         </Reveal>
@@ -208,7 +208,7 @@ function Features() {
 
 function HowItWorks() {
   const steps = [
-    ["1", "Run Shotify", "npx shotify"],
+    ["1", "Run Storeshots", "npx storeshots"],
     ["2", "Routes are discovered", "app/profile.tsx → /profile"],
     ["3", "Screenshots are generated", "screenshots/iphone-6.9/home.png"]
   ];

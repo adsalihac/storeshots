@@ -5,7 +5,7 @@ export default function Product() {
     <View style={styles.screen}>
       <Text style={styles.eyebrow}>Dynamic route</Text>
       <Text style={styles.title}>Product detail</Text>
-      <Text style={styles.body}>Shotify reports this route as /product/:id.</Text>
+      <Text style={styles.body}>Storeshots reports this route as /product/:id.</Text>
     </View>
   );
 }

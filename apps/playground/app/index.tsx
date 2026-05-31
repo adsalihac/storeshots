@@ -4,9 +4,9 @@ import { StyleSheet, Text, View } from "react-native";
 export default function Home() {
   return (
     <View style={styles.screen}>
-      <Text style={styles.eyebrow}>Shotify Playground</Text>
+      <Text style={styles.eyebrow}>Storeshots Playground</Text>
       <Text style={styles.title}>Generate store screenshots from app routes.</Text>
-      <Text style={styles.body}>This sample route tree is used to test Shotify discovery and capture.</Text>
+      <Text style={styles.body}>This sample route tree is used to test Storeshots discovery and capture.</Text>
       <View style={styles.links}>
         <Link href="/profile" style={styles.link}>Profile</Link>
         <Link href="/subscription" style={styles.link}>Subscription</Link>

@@ -1,7 +1,7 @@
 {
   "name": "@storeshots/device-presets",
   "version": "0.1.0",
-  "description": "App Store and Play Store screenshot device presets for Shotify.",
+  "description": "App Store and Play Store screenshot device presets for Storeshots.",
   "type": "module",
   "main": "./dist/index.js",
   "types": "./dist/index.d.ts",

@@ -21,8 +21,8 @@ jobs:
           node-version: 20
           cache: pnpm
       - run: pnpm install --frozen-lockfile
-      - run: pnpm --filter @shotify/playground screenshots
+      - run: pnpm --filter @storeshots/playground screenshots
       - uses: actions/upload-artifact@v4
         with:
-          name: shotify-playground-screenshots
+          name: storeshots-playground-screenshots
           path: apps/playground/screenshots

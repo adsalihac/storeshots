@@ -1,7 +1,7 @@
 {
   "name": "@storeshots/image-processor",
   "version": "0.1.0",
-  "description": "High quality screenshot processing for Shotify.",
+  "description": "High quality screenshot processing for Storeshots.",
   "type": "module",
   "main": "./dist/index.js",
   "types": "./dist/index.d.ts",

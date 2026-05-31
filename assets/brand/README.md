@@ -1,8 +1,8 @@
-# Shotify Brand
+# Storeshots Brand
 
 ## Product name
 
-Shotify
+Storeshots
 
 ## Tagline
 

@@ -1,8 +1,8 @@
 {
   "expo": {
-    "name": "Basic Shotify Example",
-    "slug": "basic-shotify-example",
-    "scheme": "basic-shotify-example",
+    "name": "Basic Storeshots Example",
+    "slug": "basic-storeshots-example",
+    "scheme": "basic-storeshots-example",
     "plugins": ["expo-router"],
     "newArchEnabled": true
   }

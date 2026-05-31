@@ -1,13 +1,13 @@
 #!/usr/bin/env node
 import { Command } from "commander";
-import { generateScreenshots, listDevices, listRoutes, runDoctor } from "@shotify/core";
-import { formatDevicePreset } from "@shotify/device-presets";
-import { ShotifyError } from "@shotify/shared";
+import { generateScreenshots, listDevices, listRoutes, runDoctor } from "@storeshots/core";
+import { formatDevicePreset } from "@storeshots/device-presets";
+import { StoreshotsError } from "@storeshots/shared";
 
 const program = new Command();
 
 program
-  .name("shotify")
+  .name("storeshots")
   .description("Generate App Store and Play Store screenshots from Expo Router apps.")
   .version("0.1.0");
 
@@ -96,7 +96,7 @@ function normalizeArgv(argv: string[]): string[] {
   }
 
   if (args.length === 0 || args[0]?.startsWith("-") || !knownCommands.has(args[0] ?? "")) {
-    return [argv[0] ?? "node", argv[1] ?? "shotify", "generate", ...args];
+    return [argv[0] ?? "node", argv[1] ?? "storeshots", "generate", ...args];
   }
 
   return argv;
@@ -117,12 +117,12 @@ async function withErrorBoundary(fn: () => Promise<void>): Promise<void> {
   try {
     await fn();
   } catch (error) {
-    if (error instanceof ShotifyError) {
-      console.error(`Shotify ${error.code}: ${error.message}`);
+    if (error instanceof StoreshotsError) {
+      console.error(`Storeshots ${error.code}: ${error.message}`);
     } else if (error instanceof Error) {
       console.error(error.message);
     } else {
-      console.error("Unknown Shotify error");
+      console.error("Unknown Storeshots error");
     }
 
     process.exitCode = 1;

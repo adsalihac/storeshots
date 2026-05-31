@@ -1,14 +1,14 @@
-# Shotify CLI
+# Storeshots CLI
 
 ```bash
-npx shotify
+npx storeshots
 ```
 
 Commands:
 
 ```bash
-shotify generate
-shotify routes
-shotify devices
-shotify doctor
+storeshots generate
+storeshots routes
+storeshots devices
+storeshots doctor
 ```

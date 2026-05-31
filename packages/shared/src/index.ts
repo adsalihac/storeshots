@@ -2,7 +2,7 @@ import { z } from "zod";
 
 export const platformSchema = z.enum(["apple", "android", "all"]);
 
-export const shotifyConfigSchema = z.object({
+export const StoreshotsConfigSchema = z.object({
   root: z.string().min(1),
   outputDir: z.string().min(1).default("screenshots"),
   platform: platformSchema.default("all"),
@@ -14,7 +14,7 @@ export const shotifyConfigSchema = z.object({
 });
 
 export type Platform = z.infer<typeof platformSchema>;
-export type ShotifyConfig = z.infer<typeof shotifyConfigSchema>;
+export type StoreshotsConfig = z.infer<typeof StoreshotsConfigSchema>;
 
 export type DeviceKind = "phone" | "tablet";
 
@@ -41,12 +41,12 @@ export interface RouteInfo {
   dynamic: boolean;
 }
 
-export class ShotifyError extends Error {
+export class StoreshotsError extends Error {
   readonly code: string;
 
   constructor(code: string, message: string) {
     super(message);
-    this.name = "ShotifyError";
+    this.name = "StoreshotsError";
     this.code = code;
   }
 }

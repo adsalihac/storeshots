@@ -1,5 +1,5 @@
 name: Bug report
-description: Report a problem with Shotify.
+description: Report a problem with Storeshots.
 title: "[Bug]: "
 labels: ["bug"]
 body:
@@ -20,7 +20,7 @@ body:
   - type: input
     id: version
     attributes:
-      label: Shotify version
+      label: Storeshots version
       placeholder: 0.1.0
   - type: textarea
     id: environment

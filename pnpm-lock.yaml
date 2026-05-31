@@ -26,7 +26,7 @@ importers:
 
   apps/docs:
     dependencies:
-      '@shotify/ui':
+      '@storeshots/ui':
         specifier: workspace:*
         version: link:../../packages/ui
       '@tailwindcss/postcss':
@@ -88,7 +88,7 @@ importers:
         specifier: ^0.83.1
         version: 0.83.9(@babel/core@7.29.7)(@types/react@19.2.15)(react@19.2.6)
     devDependencies:
-      shotify:
+      storeshots:
         specifier: workspace:*
         version: link:../../packages/cli
       typescript:
@@ -97,7 +97,7 @@ importers:
 
   apps/website:
     dependencies:
-      '@shotify/ui':
+      '@storeshots/ui':
         specifier: workspace:*
         version: link:../../packages/ui
       '@tailwindcss/postcss':
@@ -150,7 +150,7 @@ importers:
         specifier: ^0.83.1
         version: 0.83.9(@babel/core@7.29.7)(@types/react@19.2.15)(react@19.2.6)
     devDependencies:
-      shotify:
+      storeshots:
         specifier: workspace:*
         version: link:../../packages/cli
       typescript:
@@ -172,7 +172,7 @@ importers:
         specifier: ^0.83.1
         version: 0.83.9(@babel/core@7.29.7)(@types/react@19.2.15)(react@19.2.6)
     devDependencies:
-      shotify:
+      storeshots:
         specifier: workspace:*
         version: link:../../packages/cli
       typescript:
@@ -194,7 +194,7 @@ importers:
         specifier: ^0.83.1
         version: 0.83.9(@babel/core@7.29.7)(@types/react@19.2.15)(react@19.2.6)
     devDependencies:
-      shotify:
+      storeshots:
         specifier: workspace:*
         version: link:../../packages/cli
       typescript:
@@ -203,13 +203,13 @@ importers:
 
   packages/cli:
     dependencies:
-      '@shotify/core':
+      '@storeshots/core':
         specifier: workspace:*
         version: link:../core
-      '@shotify/device-presets':
+      '@storeshots/device-presets':
         specifier: workspace:*
         version: link:../device-presets
-      '@shotify/shared':
+      '@storeshots/shared':
         specifier: workspace:*
         version: link:../shared
       commander:
@@ -228,19 +228,19 @@ importers:
 
   packages/core:
     dependencies:
-      '@shotify/device-presets':
+      '@storeshots/device-presets':
         specifier: workspace:*
         version: link:../device-presets
-      '@shotify/expo-router-discovery':
+      '@storeshots/expo-router-discovery':
         specifier: workspace:*
         version: link:../expo-router-discovery
-      '@shotify/image-processor':
+      '@storeshots/image-processor':
         specifier: workspace:*
         version: link:../image-processor
-      '@shotify/screenshot-engine':
+      '@storeshots/screenshot-engine':
         specifier: workspace:*
         version: link:../screenshot-engine
-      '@shotify/shared':
+      '@storeshots/shared':
         specifier: workspace:*
         version: link:../shared
     devDependencies:
@@ -250,7 +250,7 @@ importers:
 
   packages/device-presets:
     dependencies:
-      '@shotify/shared':
+      '@storeshots/shared':
         specifier: workspace:*
         version: link:../shared
     devDependencies:
@@ -260,7 +260,7 @@ importers:
 
   packages/expo-router-discovery:
     dependencies:
-      '@shotify/shared':
+      '@storeshots/shared':
         specifier: workspace:*
         version: link:../shared
     devDependencies:
@@ -270,7 +270,7 @@ importers:
 
   packages/image-processor:
     dependencies:
-      '@shotify/shared':
+      '@storeshots/shared':
         specifier: workspace:*
         version: link:../shared
       sharp:
@@ -283,7 +283,7 @@ importers:
 
   packages/screenshot-engine:
     dependencies:
-      '@shotify/shared':
+      '@storeshots/shared':
         specifier: workspace:*
         version: link:../shared
       sharp:

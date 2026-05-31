@@ -1,10 +1,10 @@
 {
-  "name": "ecommerce-shotify-example",
+  "name": "ecommerce-storeshots-example",
   "version": "0.1.0",
   "private": true,
   "scripts": {
     "dev": "expo start",
-    "screenshots": "shotify generate --root . --routes /,/cart,/checkout"
+    "screenshots": "storeshots generate --root . --routes /,/cart,/checkout"
   },
   "dependencies": {
     "expo": "~55.0.0",
@@ -13,7 +13,7 @@
     "react-native": "^0.83.1"
   },
   "devDependencies": {
-    "shotify": "workspace:*",
+    "storeshots": "workspace:*",
     "typescript": "^5.7.2"
   }
 }

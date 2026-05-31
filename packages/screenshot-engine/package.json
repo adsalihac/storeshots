@@ -1,7 +1,7 @@
 {
   "name": "@storeshots/screenshot-engine",
   "version": "0.1.0",
-  "description": "Screenshot capture orchestration for Shotify.",
+  "description": "Screenshot capture orchestration for Storeshots.",
   "type": "module",
   "main": "./dist/index.js",
   "types": "./dist/index.d.ts",

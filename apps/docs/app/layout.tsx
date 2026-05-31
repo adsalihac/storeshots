@@ -4,12 +4,12 @@ import { RootProvider } from "fumadocs-ui/provider/next";
 import "./global.css";
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://docs.shotify.dev"),
+  metadataBase: new URL("https://docs.storeshots.dev"),
   title: {
-    template: "%s - Shotify Docs",
-    default: "Shotify Docs"
+    template: "%s - Storeshots Docs",
+    default: "Storeshots Docs"
   },
-  description: "Documentation for the Shotify Expo screenshot generation CLI."
+  description: "Documentation for the Storeshots Expo screenshot generation CLI."
 };
 
 export default function RootLayout({ children }: { children: ReactNode }) {

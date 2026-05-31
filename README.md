@@ -1,16 +1,16 @@
-# Shotify
+# Storeshots
 
 Generate App Store and Play Store screenshots from Expo Router apps.
 
-Shotify is a developer-first CLI that discovers routes in an Expo app, opens them on supported device presets, captures screenshots, and exports store-ready PNG assets with one command.
+Storeshots is a developer-first CLI that discovers routes in an Expo app, opens them on supported device presets, captures screenshots, and exports store-ready PNG assets with one command.
 
 ```bash
-npx shotify
+npx storeshots
 ```
 
 ## Why
 
-Store screenshots are repetitive release work: launch the simulator, navigate each route, capture images, resize assets, and repeat across Apple and Android device sizes. Shotify turns that workflow into a repeatable command that can run locally or in CI.
+Store screenshots are repetitive release work: launch the simulator, navigate each route, capture images, resize assets, and repeat across Apple and Android device sizes. Storeshots turns that workflow into a repeatable command that can run locally or in CI.
 
 ```txt
 ✓ Found 14 routes
@@ -57,22 +57,22 @@ pnpm typecheck
 Run the CLI from an Expo Router project:
 
 ```bash
-npx shotify
-npx shotify routes
-npx shotify devices
-npx shotify doctor
+npx storeshots
+npx storeshots routes
+npx storeshots devices
+npx storeshots doctor
 ```
 
 ## Packages
 
-- `@shotify/cli` provides the `shotify` binary.
-- `@shotify/core` coordinates route discovery, capture, and processing.
-- `@shotify/expo-router-discovery` converts Expo Router files into app routes.
-- `@shotify/screenshot-engine` owns simulator/device capture orchestration.
-- `@shotify/image-processor` prepares high quality PNG exports with Sharp.
-- `@shotify/device-presets` defines App Store and Play Store target devices.
-- `@shotify/shared` contains shared schemas, logging, and utilities.
-- `@shotify/ui` contains reusable UI primitives for the website and docs.
+- `@storeshots/cli` provides the `storeshots` binary.
+- `@storeshots/core` coordinates route discovery, capture, and processing.
+- `@storeshots/expo-router-discovery` converts Expo Router files into app routes.
+- `@storeshots/screenshot-engine` owns simulator/device capture orchestration.
+- `@storeshots/image-processor` prepares high quality PNG exports with Sharp.
+- `@storeshots/device-presets` defines App Store and Play Store target devices.
+- `@storeshots/shared` contains shared schemas, logging, and utilities.
+- `@storeshots/ui` contains reusable UI primitives for the website and docs.
 
 ## Status
 

@@ -1,7 +1,7 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   reactStrictMode: true,
-  transpilePackages: ["@shotify/ui"]
+  transpilePackages: ["@storeshots/ui"]
 };
 
 export default nextConfig;

@@ -1,7 +1,7 @@
 import { readdir, stat } from "node:fs/promises";
 import path from "node:path";
-import type { RouteInfo } from "@shotify/shared";
-import { ShotifyError, unique } from "@shotify/shared";
+import type { RouteInfo } from "@storeshots/shared";
+import { StoreshotsError, unique } from "@storeshots/shared";
 
 const routeExtensions = new Set([".tsx", ".ts", ".jsx", ".js"]);
 const ignoredFilePrefixes = ["_", "+", "."];
@@ -51,7 +51,7 @@ export async function resolveAppDirectory(root: string, explicitAppDir?: string)
     }
   }
 
-  throw new ShotifyError(
+  throw new StoreshotsError(
     "APP_DIR_NOT_FOUND",
     "Could not find an Expo Router app directory. Expected app/ or src/app/."
   );

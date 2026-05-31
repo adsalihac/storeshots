@@ -1,7 +1,7 @@
 {
   "name": "@storeshots/expo-router-discovery",
   "version": "0.1.0",
-  "description": "Expo Router route discovery for Shotify.",
+  "description": "Expo Router route discovery for Storeshots.",
   "type": "module",
   "main": "./dist/index.js",
   "types": "./dist/index.d.ts",

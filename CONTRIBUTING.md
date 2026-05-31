@@ -1,6 +1,6 @@
 # Contributing
 
-Thanks for helping make Shotify better for Expo developers.
+Thanks for helping make Storeshots better for Expo developers.
 
 ## Development
 

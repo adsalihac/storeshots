@@ -4,7 +4,7 @@
   "description": "Generate App Store and Play Store screenshots from Expo Router apps.",
   "type": "module",
   "bin": {
-    "shotify": "./dist/index.js"
+    "storeshots": "./dist/index.js"
   },
   "main": "./dist/index.js",
   "types": "./dist/index.d.ts",

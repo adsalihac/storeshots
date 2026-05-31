@@ -1,9 +1,9 @@
-Shotify is live.
+Storeshots is live.
 
 Generate App Store and Play Store screenshots from Expo Router apps with one command:
 
 ```bash
-npx shotify
+npx storeshots
 ```
 
 No manual simulator capture.

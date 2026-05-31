@@ -4,7 +4,7 @@ export default function Home() {
   return (
     <View style={styles.screen}>
       <Text style={styles.title}>Home</Text>
-      <Text style={styles.body}>A minimal Expo Router app for Shotify.</Text>
+      <Text style={styles.body}>A minimal Expo Router app for Storeshots.</Text>
     </View>
   );
 }

@@ -1,6 +1,6 @@
 ---
 title: Troubleshooting
-description: Diagnose common Shotify setup issues.
+description: Diagnose common Storeshots setup issues.
 ---
 
 ## No routes found
@@ -8,7 +8,7 @@ description: Diagnose common Shotify setup issues.
 Confirm your Expo Router files live in `app/` or `src/app/`, and that screen files use `.tsx`, `.ts`, `.jsx`, or `.js`.
 
 ```bash
-npx shotify routes
+npx storeshots routes
 ```
 
 ## Simulator tooling missing
@@ -16,7 +16,7 @@ npx shotify routes
 Run doctor:
 
 ```bash
-npx shotify doctor
+npx storeshots doctor
 ```
 
 Install Xcode command line tools for Apple simulators and Android platform tools for Android devices.
@@ -26,13 +26,13 @@ Install Xcode command line tools for Apple simulators and Android platform tools
 List the selected device presets:
 
 ```bash
-npx shotify devices
+npx storeshots devices
 ```
 
 Then generate a single preset to isolate the issue:
 
 ```bash
-npx shotify generate --devices iphone-6-9 --routes /
+npx storeshots generate --devices iphone-6-9 --routes /
 ```
 
 ## Dynamic routes
@@ -40,5 +40,5 @@ npx shotify generate --devices iphone-6-9 --routes /
 Dynamic routes need stable fixture data before they can be captured reliably. Prefer explicit route lists for launch screenshots:
 
 ```bash
-npx shotify generate --routes /,/profile,/subscription
+npx storeshots generate --routes /,/profile,/subscription
 ```

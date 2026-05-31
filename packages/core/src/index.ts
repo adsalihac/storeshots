@@ -2,12 +2,12 @@ import { access } from "node:fs/promises";
 import path from "node:path";
 import { execFile } from "node:child_process";
 import { promisify } from "node:util";
-import { getDevicePresets } from "@shotify/device-presets";
-import { discoverExpoRoutes, resolveAppDirectory } from "@shotify/expo-router-discovery";
-import { processScreenshot } from "@shotify/image-processor";
-import { createScreenshotEngine } from "@shotify/screenshot-engine";
-import type { DevicePreset, RouteInfo, ShotifyConfig } from "@shotify/shared";
-import { ShotifyError, createLogger, formatDuration, routeToFileName, shotifyConfigSchema } from "@shotify/shared";
+import { getDevicePresets } from "@storeshots/device-presets";
+import { discoverExpoRoutes, resolveAppDirectory } from "@storeshots/expo-router-discovery";
+import { processScreenshot } from "@storeshots/image-processor";
+import { createScreenshotEngine } from "@storeshots/screenshot-engine";
+import type { DevicePreset, RouteInfo, StoreshotsConfig } from "@storeshots/shared";
+import { StoreshotsError, createLogger, formatDuration, routeToFileName, StoreshotsConfigSchema } from "@storeshots/shared";
 
 const execFileAsync = promisify(execFile);
 
@@ -19,9 +19,9 @@ export interface GenerateResult {
   durationMs: number;
 }
 
-export async function generateScreenshots(input: Partial<ShotifyConfig> = {}): Promise<GenerateResult> {
+export async function generateScreenshots(input: Partial<StoreshotsConfig> = {}): Promise<GenerateResult> {
   const startedAt = Date.now();
-  const config = shotifyConfigSchema.parse({
+  const config = StoreshotsConfigSchema.parse({
     root: process.cwd(),
     ...input
   });
@@ -42,7 +42,7 @@ export async function generateScreenshots(input: Partial<ShotifyConfig> = {}): P
   const files: string[] = [];
 
   if (routes.length === 0) {
-    throw new ShotifyError("NO_ROUTES_FOUND", "No Expo Router screens were found to capture.");
+    throw new StoreshotsError("NO_ROUTES_FOUND", "No Expo Router screens were found to capture.");
   }
 
   logger.success(`Found ${routes.length} route${routes.length === 1 ? "" : "s"}`);
@@ -107,7 +107,7 @@ export async function listRoutes(root = process.cwd()): Promise<RouteInfo[]> {
   return discoverExpoRoutes({ root });
 }
 
-export function listDevices(platform: ShotifyConfig["platform"] = "all"): DevicePreset[] {
+export function listDevices(platform: StoreshotsConfig["platform"] = "all"): DevicePreset[] {
   return getDevicePresets(platform);
 }
 
@@ -185,12 +185,12 @@ async function checkCommand(command: string, label: string): Promise<DoctorCheck
 
 async function checkSharp(): Promise<DoctorCheck> {
   try {
-    const imageProcessor = await import("@shotify/image-processor");
+    const imageProcessor = await import("@storeshots/image-processor");
 
     return {
       name: "sharp",
       ok: typeof imageProcessor.processScreenshot === "function",
-      message: "Sharp image processing is available through @shotify/image-processor"
+      message: "Sharp image processing is available through @storeshots/image-processor"
     };
   } catch {
     return {

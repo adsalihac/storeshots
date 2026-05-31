@@ -1,0 +1,21 @@
+{
+  "name": "@shotify/playground",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "expo start",
+    "ios": "expo start --ios",
+    "android": "expo start --android",
+    "screenshots": "shotify generate --root ."
+  },
+  "dependencies": {
+    "expo": "~55.0.0",
+    "expo-router": "~6.0.0",
+    "react": "^19.2.0",
+    "react-native": "^0.83.1"
+  },
+  "devDependencies": {
+    "shotify": "workspace:*",
+    "typescript": "^5.7.2"
+  }
+}

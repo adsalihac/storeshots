@@ -1,0 +1,38 @@
+---
+title: CI/CD
+description: Run Shotify in release pipelines.
+---
+
+Shotify is designed to run locally and in CI so screenshot assets stay reproducible.
+
+```yaml
+name: Screenshots
+
+on:
+  workflow_dispatch:
+  pull_request:
+    paths:
+      - "app/**"
+      - "src/app/**"
+
+jobs:
+  screenshots:
+    runs-on: macos-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: pnpm/action-setup@v4
+        with:
+          version: 9
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: pnpm
+      - run: pnpm install --frozen-lockfile
+      - run: pnpm screenshots
+      - uses: actions/upload-artifact@v4
+        with:
+          name: store-screenshots
+          path: screenshots
+```
+
+Use `--platform apple` or `--platform android` when your CI runner only has one simulator environment available.

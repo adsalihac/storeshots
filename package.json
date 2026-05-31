@@ -1,0 +1,37 @@
+{
+  "name": "shotify",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Generate App Store and Play Store screenshots from Expo Router apps.",
+  "packageManager": "pnpm@9.15.4",
+  "engines": {
+    "node": ">=20.11.0",
+    "pnpm": ">=9.0.0"
+  },
+  "scripts": {
+    "build": "turbo build",
+    "dev": "turbo dev --parallel --filter @shotify/website --filter @shotify/docs",
+    "dev:all": "turbo dev --parallel",
+    "lint": "turbo lint",
+    "typecheck": "turbo typecheck",
+    "clean": "turbo clean && rm -rf node_modules",
+    "format": "prettier --write \"**/*.{ts,tsx,md,mdx,json,css}\""
+  },
+  "keywords": [
+    "expo",
+    "expo-router",
+    "screenshots",
+    "app-store",
+    "play-store",
+    "react-native",
+    "cli"
+  ],
+  "license": "MIT",
+  "devDependencies": {
+    "@types/node": "^22.10.5",
+    "eslint": "^9.17.0",
+    "prettier": "^3.4.2",
+    "turbo": "^2.3.3",
+    "typescript": "^5.7.2"
+  }
+}

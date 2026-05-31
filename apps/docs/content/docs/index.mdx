@@ -1,0 +1,32 @@
+---
+title: Introduction
+description: Generate App Store and Play Store screenshots from Expo Router apps.
+---
+
+Shotify turns the repetitive store screenshot workflow into a single command for Expo apps.
+
+```bash
+npx shotify
+```
+
+It discovers Expo Router routes, captures screenshots for supported device presets, processes the images, and writes a predictable output folder that is ready for App Store Connect and Google Play Console.
+
+## What Shotify solves
+
+Mobile releases often require the same manual loop: open a simulator, navigate every release screen, take screenshots, resize them, and repeat for each device size. Shotify moves that work into a repeatable CLI pipeline.
+
+## Core workflow
+
+1. Discover routes from `app/` or `src/app/`.
+2. Capture each route for selected Apple and Android devices.
+3. Resize, crop, and export high quality PNG assets.
+4. Commit or upload the generated screenshots in CI.
+
+## Monorepo packages
+
+- `@shotify/cli` exposes the `shotify` binary.
+- `@shotify/core` coordinates generation.
+- `@shotify/expo-router-discovery` maps files to routes.
+- `@shotify/screenshot-engine` owns device capture.
+- `@shotify/image-processor` exports store-ready PNGs.
+- `@shotify/device-presets` defines Apple and Android sizes.

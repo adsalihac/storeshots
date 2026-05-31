@@ -1,0 +1,39 @@
+---
+title: Route Discovery
+description: How Expo Router files become screenshot targets.
+---
+
+Shotify reads Expo Router files from `app/` or `src/app/`.
+
+```txt
+app/
+├── index.tsx
+├── profile.tsx
+├── subscription.tsx
+└── settings.tsx
+```
+
+Detected routes:
+
+```txt
+/
+/profile
+/subscription
+/settings
+```
+
+## Supported conventions
+
+- `index.tsx` maps to the parent route.
+- Route groups like `(auth)` are omitted from the URL.
+- Dynamic routes like `[id].tsx` are represented as `:id`.
+- Catch-all routes like `[...slug].tsx` are represented as `*slug`.
+- Layout and special files such as `_layout.tsx` and `+not-found.tsx` are ignored.
+
+## Manual route selection
+
+Use `--routes` when you want to capture only release-critical screens.
+
+```bash
+npx shotify generate --routes /,/profile,/subscription
+```

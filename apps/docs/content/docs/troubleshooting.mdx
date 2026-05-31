@@ -1,0 +1,44 @@
+---
+title: Troubleshooting
+description: Diagnose common Shotify setup issues.
+---
+
+## No routes found
+
+Confirm your Expo Router files live in `app/` or `src/app/`, and that screen files use `.tsx`, `.ts`, `.jsx`, or `.js`.
+
+```bash
+npx shotify routes
+```
+
+## Simulator tooling missing
+
+Run doctor:
+
+```bash
+npx shotify doctor
+```
+
+Install Xcode command line tools for Apple simulators and Android platform tools for Android devices.
+
+## Wrong screenshot dimensions
+
+List the selected device presets:
+
+```bash
+npx shotify devices
+```
+
+Then generate a single preset to isolate the issue:
+
+```bash
+npx shotify generate --devices iphone-6-9 --routes /
+```
+
+## Dynamic routes
+
+Dynamic routes need stable fixture data before they can be captured reliably. Prefer explicit route lists for launch screenshots:
+
+```bash
+npx shotify generate --routes /,/profile,/subscription
+```

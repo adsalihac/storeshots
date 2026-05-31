@@ -1,0 +1,12 @@
+{
+  "title": "Shotify",
+  "pages": [
+    "index",
+    "installation",
+    "cli-commands",
+    "route-discovery",
+    "device-presets",
+    "ci-cd",
+    "troubleshooting"
+  ]
+}

@@ -1,0 +1,31 @@
+# dependencies
+node_modules
+.pnpm-store
+
+# build outputs
+dist
+.next
+.source
+out
+coverage
+*.tsbuildinfo
+
+# generated screenshots
+screenshots
+shotify-output
+
+# local env
+.env
+.env.*
+!.env.example
+
+# system
+.DS_Store
+Thumbs.db
+
+# logs
+*.log
+npm-debug.log*
+pnpm-debug.log*
+yarn-debug.log*
+yarn-error.log*

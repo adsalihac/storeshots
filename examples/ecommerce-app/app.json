@@ -1,0 +1,9 @@
+{
+  "expo": {
+    "name": "Shotify Commerce",
+    "slug": "shotify-commerce",
+    "scheme": "shotify-commerce",
+    "plugins": ["expo-router"],
+    "newArchEnabled": true
+  }
+}

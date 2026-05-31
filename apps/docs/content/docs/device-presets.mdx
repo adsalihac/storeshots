@@ -1,0 +1,27 @@
+---
+title: Device Presets
+description: Apple and Android screenshot sizes supported by Shotify.
+---
+
+Shotify includes presets for the most common App Store and Play Store screenshot targets.
+
+| Preset | Size | Platform |
+| --- | --- | --- |
+| `iphone-6-9` | `1320x2868` | Apple |
+| `iphone-6-5` | `1242x2688` | Apple |
+| `ipad-13` | `2048x2732` | Apple |
+| `ipad-11` | `1668x2388` | Apple |
+| `android-phone` | `1080x1920` | Android |
+| `android-tablet` | `1600x2560` | Android |
+
+List presets:
+
+```bash
+npx shotify devices
+```
+
+Generate a subset:
+
+```bash
+npx shotify generate --devices iphone-6-9,android-phone
+```

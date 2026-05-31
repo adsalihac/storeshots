@@ -1,0 +1,9 @@
+{
+  "expo": {
+    "name": "Shotify Playground",
+    "slug": "shotify-playground",
+    "scheme": "shotify-playground",
+    "orientation": "portrait",
+    "plugins": ["expo-router"]
+  }
+}

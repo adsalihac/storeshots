@@ -1,0 +1,19 @@
+name: Feature request
+description: Suggest an improvement for Shotify.
+title: "[Feature]: "
+labels: ["enhancement"]
+body:
+  - type: textarea
+    id: problem
+    attributes:
+      label: Problem
+      description: What workflow should Shotify make easier?
+    validations:
+      required: true
+  - type: textarea
+    id: solution
+    attributes:
+      label: Proposed solution
+      description: What would a good implementation look like?
+    validations:
+      required: true

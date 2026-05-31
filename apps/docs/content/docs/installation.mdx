@@ -1,0 +1,40 @@
+---
+title: Installation
+description: Add Shotify to an Expo Router app.
+---
+
+Run Shotify directly with `npx`:
+
+```bash
+npx shotify
+```
+
+Or install it as a development dependency:
+
+```bash
+pnpm add -D shotify
+```
+
+Then add a package script:
+
+```json
+{
+  "scripts": {
+    "screenshots": "shotify generate"
+  }
+}
+```
+
+## Requirements
+
+- Node.js 20.11 or newer.
+- An Expo project using Expo Router.
+- An `app/` or `src/app/` directory.
+- Apple simulator tooling for iPhone and iPad screenshots.
+- Android Debug Bridge for Android screenshots.
+
+Run the doctor command to inspect the local environment:
+
+```bash
+npx shotify doctor
+```

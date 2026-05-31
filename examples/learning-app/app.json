@@ -1,0 +1,9 @@
+{
+  "expo": {
+    "name": "Shotify Learning",
+    "slug": "shotify-learning",
+    "scheme": "shotify-learning",
+    "plugins": ["expo-router"],
+    "newArchEnabled": true
+  }
+}

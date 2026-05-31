@@ -90,9 +90,8 @@ function Header() {
           <Image
             src="/icons/storeshots-logo.svg"
             alt="Storeshots logo"
-            width={32}
-            height={32}
-            className="rounded-md border border-zinc-800 bg-zinc-950"
+            width={48}
+            height={24}
           />
           Storeshots
         </Link>

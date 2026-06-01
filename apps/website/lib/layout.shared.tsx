@@ -3,7 +3,7 @@ import { FileTerminal } from "lucide-react";
 
 export function baseOptions(): BaseLayoutProps {
   return {
-    githubUrl: "https://github.com/storeshots/storeshots",
+    githubUrl: "https://github.com/adsalihac/storeshots",
     nav: {
       title: (
         <span className="flex items-center gap-2 font-semibold">

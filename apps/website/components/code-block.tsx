@@ -39,7 +39,7 @@ function getCodeText(container: HTMLDivElement | null) {
   return clone.textContent ?? "";
 }
 
-function CopyButton({ containerRef }: { containerRef: React.RefObject<HTMLDivElement> }) {
+function CopyButton({ containerRef }: { containerRef: React.RefObject<HTMLDivElement | null> }) {
   const [copied, setCopied] = useState(false);
   const timeoutRef = useRef<number | null>(null);
 
@@ -83,19 +83,18 @@ export function MdxPre(props: React.ComponentProps<"pre">) {
   const containerRef = useRef<HTMLDivElement | null>(null);
 
   return (
-    <CodeBlock
-      {...props}
-      allowCopy={false}
-      viewportProps={{
-        ref: containerRef
-      }}
-      Actions={(actionProps) => (
-        <div {...actionProps} className={cn("empty:hidden", actionProps.className)}>
-          <CopyButton containerRef={containerRef} />
-        </div>
-      )}
-    >
-      <Pre>{props.children}</Pre>
-    </CodeBlock>
+    <div ref={containerRef}>
+      <CodeBlock
+        {...props}
+        allowCopy={false}
+        Actions={(actionProps) => (
+          <div {...actionProps} className={cn("empty:hidden", actionProps.className)}>
+            <CopyButton containerRef={containerRef} />
+          </div>
+        )}
+      >
+        <Pre>{props.children}</Pre>
+      </CodeBlock>
+    </div>
   );
 }

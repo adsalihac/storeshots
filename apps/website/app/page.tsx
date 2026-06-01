@@ -11,6 +11,7 @@ import {
   Play,
   Route,
   Smartphone,
+  Star,
   Sparkles,
   Zap
 } from "lucide-react";
@@ -64,7 +65,7 @@ const features = [
 ];
 
 const dxItems = ["Zero configuration", "Expo Router support", "TypeScript first", "CI/CD friendly", "Open source"];
-const docsBaseUrl = process.env.NEXT_PUBLIC_DOCS_URL ?? "https://docs.storeshots.dev/docs";
+const docsBaseUrl = process.env.NEXT_PUBLIC_DOCS_URL ?? "/docs";
 
 export default function Home() {
   return (
@@ -82,7 +83,34 @@ export default function Home() {
   );
 }
 
-function Header() {
+async function getStarCount() {
+  try {
+    const response = await fetch("https://api.github.com/repos/adsalihac/storeshots", {
+      next: { revalidate: 3600 }
+    });
+
+    if (!response.ok) {
+      return null;
+    }
+
+    const data = (await response.json()) as { stargazers_count?: number };
+    return data.stargazers_count ?? null;
+  } catch {
+    return null;
+  }
+}
+
+function formatStarCount(value: number) {
+  if (value >= 1000) {
+    return `${(value / 1000).toFixed(1).replace(/\.0$/, "")}k`;
+  }
+
+  return value.toString();
+}
+
+async function Header() {
+  const starCount = await getStarCount();
+
   return (
     <header className="sticky top-0 z-50 border-b border-zinc-800/80 bg-[#09090B]/82 backdrop-blur-xl">
       <div className="mx-auto flex h-16 max-w-6xl items-center justify-between px-5">
@@ -95,21 +123,22 @@ function Header() {
           />
           Storeshots
         </Link>
-        <nav className="hidden items-center gap-6 text-sm text-zinc-400 md:flex">
-          <Link className="transition hover:text-white" href="#features">
-            Features
-          </Link>
-          <Link className="transition hover:text-white" href="#docs">
-            Docs
-          </Link>
-          <Link className="transition hover:text-white" href="#launch">
-            Launch
-          </Link>
-        </nav>
         <div className="flex items-center gap-2">
-          <Link href="https://github.com/adsalihac/storeshots" className={buttonVariants({ variant: "ghost", size: "sm" })}>
+          <Link
+            href="https://github.com/adsalihac/storeshots"
+            className={buttonVariants({ variant: "ghost", size: "sm" })}
+          >
+            <Star className="h-4 w-4" />
+            <span className="hidden sm:inline">Star</span>
+            {starCount !== null ? (
+              <span className="hidden rounded-full bg-zinc-800/80 px-2 py-0.5 text-xs font-semibold text-zinc-200 sm:inline">
+                {formatStarCount(starCount)}
+              </span>
+            ) : null}
+          </Link>
+          <Link href="https://github.com/adsalihac/storeshots/fork" className={buttonVariants({ variant: "ghost", size: "sm" })}>
             <Github className="h-4 w-4" />
-            <span className="hidden sm:inline">GitHub</span>
+            <span className="hidden sm:inline">Contribute</span>
           </Link>
         </div>
       </div>
@@ -276,8 +305,8 @@ function OutputPreview() {
               <span className="font-mono text-xs text-zinc-500">PNG export</span>
             </div>
             <pre className="overflow-x-auto p-6 font-mono text-sm leading-7 text-zinc-300">
-              {tree.map((line) => (
-                <span key={line} className={cn(line.endsWith(".png") && "text-green-400")}>
+              {tree.map((line, index) => (
+                <span key={`${line}-${index}`} className={cn(line.endsWith(".png") && "text-green-400")}>
                   {line}
                   {"\n"}
                 </span>

@@ -2,6 +2,7 @@
   "name": "@storeshots/playground",
   "version": "0.1.0",
   "private": true,
+  "main": "expo-router/entry",
   "scripts": {
     "dev": "expo start",
     "ios": "expo start --ios",
@@ -9,13 +10,13 @@
     "screenshots": "storeshots generate --root ."
   },
   "dependencies": {
-    "expo": "~55.0.0",
-    "expo-router": "~6.0.0",
-    "react": "^19.2.0",
-    "react-native": "^0.83.1"
+    "expo": "56.0.8",
+    "expo-router": "~56.2.8",
+    "react": "^19.2.3",
+    "react-native": "^0.85.3"
   },
   "devDependencies": {
     "storeshots": "workspace:*",
-    "typescript": "^5.7.2"
+    "typescript": "^6.0.3"
   }
 }

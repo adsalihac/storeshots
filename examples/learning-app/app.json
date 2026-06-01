@@ -1,9 +1,0 @@
-{
-  "expo": {
-    "name": "Storeshots Learning",
-    "slug": "storeshots-learning",
-    "scheme": "storeshots-learning",
-    "plugins": ["expo-router"],
-    "newArchEnabled": true
-  }
-}

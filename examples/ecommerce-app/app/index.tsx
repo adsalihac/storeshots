@@ -1,10 +1,14 @@
-import { StyleSheet, Text, View } from "react-native";
+import { router } from "expo-router/build/global-state/router";
+import { Button, StyleSheet, Text, View } from "react-native";
 
 export default function Storefront() {
   return (
     <View style={styles.screen}>
       <Text style={styles.eyebrow}>Storefront</Text>
       <Text style={styles.title}>Curated tools for mobile teams.</Text>
+      <Button title="View product" onPress={() => {
+        router.push("/product/123");
+      }} />
     </View>
   );
 }

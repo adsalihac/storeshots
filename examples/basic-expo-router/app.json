@@ -1,9 +1,0 @@
-{
-  "expo": {
-    "name": "Basic Storeshots Example",
-    "slug": "basic-storeshots-example",
-    "scheme": "basic-storeshots-example",
-    "plugins": ["expo-router"],
-    "newArchEnabled": true
-  }
-}
